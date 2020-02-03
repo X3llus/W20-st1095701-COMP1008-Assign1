@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1278298d-f4ff-49a2-95f4-ee7597e49449" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -63,8 +68,18 @@
       <workItem from="1579027723847" duration="1876000" />
       <workItem from="1579543403860" duration="261000" />
       <workItem from="1579543679569" duration="23000" />
-      <workItem from="1580063149814" duration="1343000" />
+      <workItem from="1580063149814" duration="1421000" />
+      <workItem from="1580147567051" duration="547000" />
+      <workItem from="1580771372309" duration="1911000" />
     </task>
+    <task id="LOCAL-00001" summary="Lab 2">
+      <created>1580064531546</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580064531546</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,5 +97,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lab 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 2" />
   </component>
 </project>
