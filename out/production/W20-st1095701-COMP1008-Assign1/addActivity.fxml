@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="226.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddActivity">
+   <children>
+      <Button cancelButton="true" layoutY="360.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="33.0" prefWidth="118.0" text="Go Back">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <TableView fx:id="table" prefHeight="315.0" prefWidth="240.0">
+        <columns>
+          <TableColumn fx:id="activitiesCol" prefWidth="242.0" text="Activities" />
+        </columns>
+      </TableView>
+      <TextField fx:id="newItem" layoutX="5.0" layoutY="325.0" prefHeight="26.0" prefWidth="129.0" />
+      <Button defaultButton="true" layoutX="122.0" layoutY="360.0" mnemonicParsing="false" onAction="#addItem" prefHeight="33.0" prefWidth="118.0" text="Add Item">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="140.0" layoutY="322.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="33.0" prefWidth="99.0" text="Remove">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
