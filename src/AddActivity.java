@@ -21,6 +21,8 @@ public class AddActivity implements Initializable {
     @FXML private TableView<Activity> table;
     @FXML private TableColumn<Activity, String> activitiesCol;
 
+    private Student currentStudent;
+
     /**
      * initializes the scene
      */
@@ -35,13 +37,14 @@ public class AddActivity implements Initializable {
      */
     public void changeScene (ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("main.fxml"));
+        loader.setLocation(getClass().getResource("studentCard.fxml"));
         Parent mainParent = loader.load();
 
         Scene mainScene = new Scene(mainParent);
 
-        Controller controller = loader.getController();
-        controller.initData(getList());
+        StudentCard controller = loader.getController();
+        currentStudent.setActivities(getList());
+        controller.initData(currentStudent);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
@@ -51,10 +54,12 @@ public class AddActivity implements Initializable {
 
     /**
      * Builds the table
-     * @param activities String list of activities
+     * @param student accepts a student object
      */
     @FXML
-    public void initData(List<String> activities) {
+    public void initData(Student student) {
+        List<String> activities = student.getActivitiesList();
+        currentStudent = student;
         for (String activity : activities) {
             Activity a = new Activity(activity);
             table.getItems().add(a);

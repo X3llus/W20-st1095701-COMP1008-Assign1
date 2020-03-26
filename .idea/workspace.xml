@@ -2,18 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1278298d-f4ff-49a2-95f4-ee7597e49449" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/addActivity.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NewStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newStudent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/W20-st1095701-COMP1008-Assign1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/W20-st1095701-COMP1008-Assign1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Activity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Activity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/AddActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/AddActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Controller.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/W20-st1095701-COMP1008-Assign1/main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/addActivity.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/addActivity.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fish.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/fish.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/studentCard.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +28,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaFXApplication" />
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -40,9 +44,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../W20COMP1008Mar2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -82,6 +95,11 @@
       <workItem from="1580147567051" duration="547000" />
       <workItem from="1580771372309" duration="2224000" />
       <workItem from="1581979183873" duration="20517000" />
+      <workItem from="1583171350676" duration="1423000" />
+      <workItem from="1583175912882" duration="331000" />
+      <workItem from="1583178452773" duration="770000" />
+      <workItem from="1583772918719" duration="969000" />
+      <workItem from="1585253927142" duration="7645000" />
     </task>
     <task id="LOCAL-00001" summary="Lab 2">
       <created>1580064531546</created>

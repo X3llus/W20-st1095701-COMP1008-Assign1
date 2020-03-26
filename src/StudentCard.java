@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class StudentCard implements Initializable {
 
     // Creates FXML id's
     @FXML ImageView imgStudent;
@@ -26,29 +26,32 @@ public class Controller implements Initializable {
     @FXML Label sNum;
     @FXML TextArea activities;
 
-    // Makes student
-    private Student studentOne = new Student("Braden", "coates", 1095701, Arrays.asList("Programming", "Reading"), new Image("./fish.jpg"));
+    private Student currentStudent;
+
+    private void populate() {
+        fName.setText(currentStudent.getFName());
+        lName.setText(currentStudent.getLName());
+        sNum.setText(String.valueOf(currentStudent.getSNum()));
+        imgStudent.setImage(currentStudent.getImage());
+        activities.setText(currentStudent.getActivities());
+    }
 
     /**
      * initializes the scene
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        fName.setText(studentOne.getFName());
-        lName.setText(studentOne.getLName());
-        sNum.setText(String.valueOf(studentOne.getSNum()));
-        imgStudent.setImage(studentOne.getImage());
-        activities.setText(studentOne.getActivities());
+
     }
 
     /**
-     * For when switching back to this scene
-     * resets the activities list and resets the text
-     * @param a Activity List (String)
+     * For when switching to this scene
+     * makes the student
+     * @param student Activity List (String)
      */
-    public void initData(List a) {
-        studentOne.setActivities(a);
-        activities.setText(studentOne.getActivities());
+    public void initData(Student student) {
+        currentStudent = student;
+        populate();
     }
 
     /**
@@ -64,7 +67,7 @@ public class Controller implements Initializable {
         Scene activityScene = new Scene(activityParent);
 
         AddActivity controller = loader.getController();
-        controller.initData(studentOne.getActivitiesList());
+        controller.initData(currentStudent);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
