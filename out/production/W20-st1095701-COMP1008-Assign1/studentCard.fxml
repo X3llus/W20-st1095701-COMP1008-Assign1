@@ -1,50 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="299.0" prefWidth="600.0" styleClass="test" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentCard">
+<HBox xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentCard">
    <children>
-      <ImageView fx:id="imgStudent" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="221.0" layoutY="36.0" text="First Name:">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
-      <Label layoutX="221.0" layoutY="69.0" text="Last Name:">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
-      <Label layoutX="222.0" layoutY="104.0" text="Student Number:">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="fName" layoutX="387.0" layoutY="35.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="lName" layoutX="387.0" layoutY="68.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="sNum" layoutX="388.0" layoutY="103.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="24.0" layoutY="164.0" text="Favourite Activities:">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TextArea fx:id="activities" editable="false" layoutX="217.0" layoutY="164.0" prefHeight="123.0" prefWidth="345.0">
-         <font>
-            <Font size="18.0" />
-         </font></TextArea>
-      <Button layoutX="61.0" layoutY="226.0" mnemonicParsing="false" onAction="#changeScene" text="Edit Activities" />
+      <VBox alignment="BOTTOM_LEFT" prefHeight="297.0" prefWidth="208.0">
+         <children>
+            <VBox>
+               <VBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fx:id="imgStudent" fitHeight="160.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="Favourite Activities:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="110.0" prefWidth="206.0">
+               <children>
+                  <Button layoutX="50.0" layoutY="42.0" mnemonicParsing="false" onAction="#changeScene" prefWidth="107.0" text="Edit Activities" />
+               </children>
+               <padding>
+                  <Insets top="42.0" />
+               </padding>
+            </Pane>
+         </children>
+      </VBox>
+      <VBox alignment="BOTTOM_LEFT">
+         <children>
+            <VBox prefHeight="166.0" prefWidth="345.0" spacing="20.0">
+               <children>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label maxWidth="155.0" minWidth="155.0" text="First Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fName">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label maxWidth="155.0" minWidth="155.0" text="Last Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lName">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Label maxWidth="155.0" minWidth="155.0" text="Student Number:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sNum">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <TextArea fx:id="activities" editable="false" prefHeight="123.0" prefWidth="345.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </VBox>
    </children>
-</AnchorPane>
+</HBox>
