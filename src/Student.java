@@ -1,4 +1,6 @@
 import javafx.scene.image.Image;
+
+import java.time.LocalDate;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -7,6 +9,9 @@ public class Student {
     private int sNum;
     private List<String> activities;
     private Image image;
+    private LocalDate birthday;
+
+    static int nextNum = 1000001;
 
     /**
      * Constructor to verify and set variables
@@ -16,12 +21,13 @@ public class Student {
      * @param activities Favourite Activities
      * @param image Students picture
      */
-    Student(String fName, String lName, int sNum, List activities, Image image) {
+    Student(String fName, String lName, int sNum, List activities, Image image, LocalDate date) {
         setFName(fName);
         setLName(lName);
         setSNum(sNum);
         setActivities(activities);
         setImage(image);
+        setBirthday(date);
     }
 
     /**
@@ -38,7 +44,7 @@ public class Student {
      */
     public void setFName(String fName) throws IllegalArgumentException {
         fName = fName.substring(0, 1).toUpperCase() + fName.substring(1);
-        if (checkHasNum(fName)) {
+        if (checkName(fName)) {
             this.fName = fName;
         } else {
             throw new IllegalArgumentException("First name must contain 2 or more letters and not numbers or special characters");
@@ -59,7 +65,7 @@ public class Student {
      */
     public void setLName(String lName) throws IllegalArgumentException {
         lName = lName.substring(0, 1).toUpperCase() + lName.substring(1);
-        if (checkHasNum(lName)) {
+        if (checkName(lName)) {
             this.lName = lName;
         } else {
             throw new IllegalArgumentException("First name must contain 2 or more letters and not numbers or special characters");
@@ -113,22 +119,6 @@ public class Student {
     }
 
     /**
-     * adds onto activities
-     * @param activities new activities
-     */
-    public void addActivities(List activities) {
-        this.activities.addAll(activities);
-    }
-
-    /**
-     * add single activity
-     * @param activity singular activity
-     */
-    public void addActivities(String activity) {
-        this.activities.add(activity);
-    }
-
-    /**
      * @return student picture
      */
     public Image getImage() {
@@ -144,12 +134,24 @@ public class Student {
     }
 
     /**
+     * @return students birthday
+     */
+    public LocalDate getBirthday() { return birthday; }
+
+    public void setBirthday(LocalDate date) {
+        LocalDate today = LocalDate.now();
+        if (date.isBefore(today.minusYears(10)) && date.isAfter(today.minusYears(120))) {
+            birthday = date;
+        }
+    }
+
+    /**
      * Checks an inputted string for proper characters
      * @param input sting to check
      * @return boolean
      */
-    private boolean checkHasNum(String input) {
-        String regex = "^[A-Z].[a-z]+";
+    private boolean checkName(String input) {
+        String regex = "^[a-zA-Z]{2,}$";
         Pattern pattern = Pattern.compile(regex);
         return pattern.matcher(input).matches();
     }

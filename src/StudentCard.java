@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -14,6 +15,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -21,13 +24,21 @@ import java.util.ResourceBundle;
 public class StudentCard implements Initializable {
 
     // Creates FXML id's
-    @FXML ImageView imgStudent;
-    @FXML Label fName;
-    @FXML Label lName;
-    @FXML Label sNum;
-    @FXML TextArea activities;
+    @FXML private ImageView imgStudent;
+    @FXML private Label fName;
+    @FXML private Label lName;
+    @FXML private Label sNum;
+    @FXML private TextArea activities;
+    @FXML private Label birthday;
+    @FXML private ListView<Student> listView;
 
+    private ArrayList<Student> currentStudents = new ArrayList<Student>();
     private Student currentStudent;
+
+    public void listViewClick() {
+        currentStudent = listView.getSelectionModel().getSelectedItem();
+        populate();
+    }
 
     private void populate() {
         fName.setText(currentStudent.getFName());
@@ -35,6 +46,7 @@ public class StudentCard implements Initializable {
         sNum.setText(String.valueOf(currentStudent.getSNum()));
         imgStudent.setImage(currentStudent.getImage());
         activities.setText(currentStudent.getActivities());
+        birthday.setText(currentStudent.getBirthday().toString() + " Age: " + LocalDate.now().minusYears(currentStudent.getBirthday().getYear()).getYear());
     }
 
     /**
@@ -48,10 +60,12 @@ public class StudentCard implements Initializable {
     /**
      * For when switching to this scene
      * makes the student
-     * @param student Activity List (String)
+     * @param students Activity List (String)
      */
-    public void initData(Student student) {
-        currentStudent = student;
+    public void initData(ArrayList<Student> students) {
+        currentStudents = students;
+        currentStudent = students.get(students.size() - 1);
+        listView.getItems().addAll(currentStudents);
         populate();
     }
 
@@ -62,13 +76,17 @@ public class StudentCard implements Initializable {
     public void changeScene (ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("addActivity.fxml"));
+        loader.setLocation(getClass().getResource("newStudent.fxml"));
         Parent activityParent = loader.load();
 
         Scene activityScene = new Scene(activityParent);
 
-        AddActivity controller = loader.getController();
-        controller.initData(currentStudent);
+        NewStudent controller = loader.getController();
+        if (currentStudents != null) {
+            System.out.println(currentStudents.toString());
+        }
+        controller.fillNumber(Student.nextNum, currentStudents);
+        Student.nextNum += 1;
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 

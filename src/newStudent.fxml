@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="445.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewStudent">
+<AnchorPane prefHeight="481.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewStudent">
    <children>
-      <BorderPane prefHeight="445.0" prefWidth="350.0">
+      <BorderPane prefHeight="481.0" prefWidth="514.0">
          <top>
             <Label text="Create New Student" textAlignment="CENTER" BorderPane.alignment="CENTER">
                <font>
@@ -56,9 +56,19 @@
                                    <Font size="14.0" />
                                </font>
                            </Label>
-                           <TextField fx:id="txt_sNum" layoutX="165.0" layoutY="7.0" promptText="7 numbers &gt; 1000000" />
+                           <TextField fx:id="txt_sNum" editable="false" layoutX="165.0" layoutY="7.0" />
                        </children>
                    </Pane>
+                  <Pane prefHeight="40.0" prefWidth="355.0">
+                     <children>
+                        <DatePicker fx:id="datePicker" layoutX="165.0" layoutY="7.0" prefHeight="26.0" prefWidth="169.0" />
+                        <Label layoutX="14.0" layoutY="12.0" text="Birthday">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0">
                      <children>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="350.0">
@@ -91,6 +101,51 @@
                </children>
             </VBox>
          </center>
+         <right>
+            <VBox prefHeight="349.0" prefWidth="159.0" BorderPane.alignment="CENTER">
+               <children>
+                  <CheckBox mnemonicParsing="false" onAction="#checkBoxPressed" text="Gaming">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" onAction="#checkBoxPressed" text="Reading">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" onAction="#checkBoxPressed" text="Cooking">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" onAction="#checkBoxPressed" text="Camping">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" onAction="#checkBoxPressed" text="Biking">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" onAction="#checkBoxPressed" text="Baking">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" onAction="#checkBoxPressed" text="Swimming">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" onAction="#checkBoxPressed" text="Programming">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+            </VBox>
+         </right>
       </BorderPane>
    </children>
 </AnchorPane>
